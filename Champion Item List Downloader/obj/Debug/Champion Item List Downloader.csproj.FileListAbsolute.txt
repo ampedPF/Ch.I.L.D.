@@ -1,0 +1,7 @@
+C:\DATA\PROJECTS\SharpDevelop\Champion Item List Downloader\Champion Item List Downloader\obj\Debug\Champion Item List Downloader.csprojResolveAssemblyReference.cache
+C:\DATA\PROJECTS\SharpDevelop\Champion Item List Downloader\Champion Item List Downloader\bin\Debug\Champion Item List Downloader.exe
+C:\DATA\PROJECTS\SharpDevelop\Champion Item List Downloader\Champion Item List Downloader\bin\Debug\Champion Item List Downloader.pdb
+C:\DATA\PROJECTS\SharpDevelop\Champion Item List Downloader\Champion Item List Downloader\obj\Debug\Champion Item List Downloader.exe
+C:\DATA\PROJECTS\SharpDevelop\Champion Item List Downloader\Champion Item List Downloader\obj\Debug\Champion Item List Downloader.pdb
+C:\DATA\PROJECTS\SharpDevelop\Champion Item List Downloader\Champion Item List Downloader\obj\Debug\Champion_Item_List_Downloader.MainForm.resources
+C:\DATA\PROJECTS\SharpDevelop\Champion Item List Downloader\Champion Item List Downloader\obj\Debug\Champion Item List Downloader.csproj.GenerateResource.Cache
