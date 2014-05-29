@@ -45,7 +45,7 @@ namespace Champion_Item_List_Downloader
 			// 
 			// btn_Download
 			// 
-			this.btn_Download.Location = new System.Drawing.Point(12, 38);
+			this.btn_Download.Location = new System.Drawing.Point(8, 34);
 			this.btn_Download.Name = "btn_Download";
 			this.btn_Download.Size = new System.Drawing.Size(75, 23);
 			this.btn_Download.TabIndex = 0;
@@ -55,16 +55,16 @@ namespace Champion_Item_List_Downloader
 			// 
 			// progressBar
 			// 
-			this.progressBar.Location = new System.Drawing.Point(12, 12);
+			this.progressBar.Location = new System.Drawing.Point(8, 8);
 			this.progressBar.Name = "progressBar";
-			this.progressBar.Size = new System.Drawing.Size(237, 23);
+			this.progressBar.Size = new System.Drawing.Size(240, 23);
 			this.progressBar.Step = 1;
 			this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
 			this.progressBar.TabIndex = 1;
 			// 
 			// ll_LolFlavor
 			// 
-			this.ll_LolFlavor.Location = new System.Drawing.Point(118, 38);
+			this.ll_LolFlavor.Location = new System.Drawing.Point(114, 34);
 			this.ll_LolFlavor.Name = "ll_LolFlavor";
 			this.ll_LolFlavor.Size = new System.Drawing.Size(131, 23);
 			this.ll_LolFlavor.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace Champion_Item_List_Downloader
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(89, 38);
+			this.label1.Location = new System.Drawing.Point(85, 34);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(30, 23);
 			this.label1.TabIndex = 3;
@@ -86,7 +86,7 @@ namespace Champion_Item_List_Downloader
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(261, 72);
+			this.ClientSize = new System.Drawing.Size(258, 65);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.ll_LolFlavor);
 			this.Controls.Add(this.progressBar);

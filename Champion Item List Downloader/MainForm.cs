@@ -8,6 +8,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
@@ -24,6 +25,7 @@ namespace Champion_Item_List_Downloader
 		const string listFile = "Lists.txt";
 		List<string> championsList = new List<string>();
 		List<string> rolesList = new List<string>();
+		Settings settings = new Settings();
 		
 		public MainForm()
 		{
@@ -31,7 +33,7 @@ namespace Champion_Item_List_Downloader
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			
+			settings.loadSettings("settings.ini");
 			loadList(listFile);
 		}
 		
@@ -61,20 +63,6 @@ namespace Champion_Item_List_Downloader
 			}
 		}
 		
-		public void loadStringList(string file, List<string> list){
-			try {
-				using (StreamReader r = new StreamReader(file))
-				{
-				    string line;
-				    while ((line = r.ReadLine()) != null)
-				    {
-						list.Add(line);
-				    }
-				}
-			} catch (Exception) {
-			}
-		}
-		
 		void Btn_DownloadClick(object sender, EventArgs e)
 		{
 			WebClient webClient = new WebClient();
@@ -83,8 +71,11 @@ namespace Champion_Item_List_Downloader
 			int count = 0;
 			progressBar.Value = 0;
 			
-			string fileName = "";
+			string urlSettings = settings.getUrlPattern();
+			string pathSettings = settings.getPathPattern();
+	    	
 	    	string url = "";
+	    	string fileName = "";
 	    	string path = "";
 			
 			foreach (string c in championsList)
@@ -92,9 +83,10 @@ namespace Champion_Item_List_Downloader
 				foreach (string r in rolesList)
 				{
 					try {
-						fileName = c + @"_" + r + @"_scrape.json";
-				    	url = @"http://www.lolflavor.com/champions/" + c + @"/Recommended/" + fileName;
-				    	path = @"Champions\" + c + @"\Recommended\";
+						
+						url = urlSettings.Replace("%c%", c).Replace("%t%", r);
+				    	fileName = url.Substring(url.LastIndexOf('/')+1);
+				    	path = pathSettings.Replace("%c%", c).Replace("%t%", r);
     					Directory.CreateDirectory(path);
     					webClient.DownloadFile(new Uri(url), path + fileName);
     					count++;
